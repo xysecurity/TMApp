@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailEvent_Activity">
+
+    <Button
+        android:id="@+id/DeleteBtn"
+        android:layout_width="386dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Delete"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="350dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="412dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="8dp"
+        android:text="Title"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/DeleteBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.163" />
+
+    <TextView
+        android:id="@+id/DateText"
+        android:layout_width="348dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="344dp"
+        android:text="Date"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/DeleteBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <EditText
+        android:id="@+id/ContentText"
+        android:layout_width="348dp"
+        android:layout_height="206dp"
+        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="41dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/ReeditBtn"
+        android:layout_width="397dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="56dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Reedit"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <TextView
+        android:id="@+id/MusicText"
+        android:layout_width="346dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Music"
+        app:layout_constraintBottom_toTopOf="@+id/DeleteBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ContentText"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <com.ddz.floatingactionbutton.FloatingActionMenu
+        android:id="@+id/fab2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="33dp"
+        app:fab_expandDirection="down"
+        app:layout_constraintBottom_toTopOf="@+id/ContentText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toEndOf="@+id/DateText"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintVertical_bias="0.0">
+        <!-- 设置fab_title 时， 必须设置 fab_labelStyle ，才会生效-->
+
+        <com.ddz.floatingactionbutton.FloatingActionButton
+            android:id="@+id/moment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            app:fab_icon="@drawable/moments"
+            app:fab_size="mini" />
+
+        <com.ddz.floatingactionbutton.FloatingActionButton
+            android:id="@+id/wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            app:fab_icon="@drawable/wx"
+            app:fab_size="mini" />
+
+        <com.ddz.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimaryDark"
+            app:fab_icon="@drawable/mail"
+            app:fab_size="mini" />
+    </com.ddz.floatingactionbutton.FloatingActionMenu>
+
+</android.support.constraint.ConstraintLayout>
